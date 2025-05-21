@@ -37,6 +37,15 @@ if gdf_estados is None:
     st.stop()
 
 # ================== SECCIÓN DE FILTRO DE ESTADOS ==================
+
+# Barra lateral con filtros
+with st.sidebar:
+    # Agregar tu nombre y la fecha
+    st.markdown("---")
+    st.markdown(f"**Desarrollado por:**  \n*Javier Horacio Pérez Ricárdez*")
+    st.markdown(f"**Fecha:**  \n{datetime.today().strftime('%d/%m/%Y')}")
+    st.markdown("---")
+
 st.sidebar.header("🔍 Filtro por Estado")
 estados_disponibles = gdf_estados['sta_name'].sort_values().unique()
 
